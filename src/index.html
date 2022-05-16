@@ -58,7 +58,7 @@
          </div>
          <div class="grid contact-box">
             <div class="grid__item">
-               <button class="discuss" onclick="openModal('project')">
+               <button class="discuss open-popup" data-name="project">
                   Обсудить проект
                </button>
             </div>
@@ -497,7 +497,7 @@
                         </div>
                      </div>
                      <div class="prices-flex__item">
-                        <button class="discuss" onclick="openModal('project')">
+                        <button class="discuss open-popup" data-name="project">
                            Обсудить проект
                         </button>
                      </div>
@@ -540,7 +540,7 @@
                         </div>
                      </div>
                      <div class="prices-flex__item">
-                        <button class="discuss">
+                        <button class="discuss open-popup" data-name="project">
                            Обсудить проект
                         </button>
                      </div>
@@ -583,7 +583,7 @@
                         </div>
                      </div>
                      <div class="prices-flex__item">
-                        <button class="discuss">
+                        <button class="discuss open-popup" data-name="project">
                            Обсудить проект
                         </button>
                      </div>
@@ -660,7 +660,6 @@
                      <div id="select" class="select">
                         <button type="button" class="select__result">Telegram</button>
                         <ul class="select__body">
-                           <!-- <li class="select__point">Telegram</li> -->
                            <li class="select__item">WhatsApp</li>
                            <li class="select__item">Viber</li>
                            <li class="select__item">Звонок на телефон</li>
@@ -722,46 +721,46 @@
 
    <!-- popup - обсудить проект -->
 
-   <div class="blackout">
-      <div id="popup-form" class="popup-form">
-         <div class="feedback-form">
-            <div class="feedback-form__wrapper">
-               <h3 class="feedback-form__title">
-                  Расскажите о своем проекте
-               </h3>
-               <p class="feedback-form__text">
-                  Заполните все поля, и я свяжусь с вами в ближайшее время
-               </p>
+
+   <div class="popup" data-modal="project">
+      <div class="blackout">
+         <div class="popup-form">
+            <div class="feedback-form">
+               <div class="feedback-form__wrapper">
+                  <h3 class="feedback-form__title">
+                     Расскажите о своем проекте
+                  </h3>
+                  <p class="feedback-form__text">
+                     Заполните все поля, и я свяжусь с вами в ближайшее время
+                  </p>
+               </div>
+               <form class="form">
+                  <div class="form__label">
+                     Телефон или почта
+                  </div>
+                  <input type="text" placeholder="Введите телефон" required autocomplete="on" class="form__input">
+                  <div class="form__label">
+                     Выберите удобный способ связи
+                  </div>
+                  <div id="select" class="select">
+                     <button type="button" class="select__result">Telegram</button>
+                     <ul class="select__body">
+                        <!-- <li class="select__point">Telegram</li> -->
+                        <li class="select__item">WhatsApp</li>
+                        <li class="select__item">Viber</li>
+                        <li class="select__item">Звонок на телефон</li>
+                        <li class="select__item">SMS сообщение</li>
+                     </ul>
+                  </div>
+                  <button type="submit" class="form__btn">
+                     Отправить
+                  </button>
+               </form>
             </div>
-            <form class="form">
-               <div class="form__label">
-                  Телефон или почта
-               </div>
-               <input type="text" placeholder="Введите телефон" required autocomplete="on" class="form__input">
-               <div class="form__label">
-                  Выберите удобный способ связи
-               </div>
-               <div id="select" class="select">
-                  <button type="button" class="select__result">Telegram</button>
-                  <ul class="select__body">
-                     <!-- <li class="select__point">Telegram</li> -->
-                     <li class="select__item">WhatsApp</li>
-                     <li class="select__item">Viber</li>
-                     <li class="select__item">Звонок на телефон</li>
-                     <li class="select__item">SMS сообщение</li>
-                  </ul>
-               </div>
-               <button type="submit" class="form__btn">
-                  Отправить
-               </button>
-            </form>
+            <button class="popup-close"></button>
          </div>
-         <button class="popup-close" onclick="closeModal()"></button>
       </div>
    </div>
-
-
-   <!-- <script src="js/script.min.js" defer></script> -->
 </body>
 
 </html>

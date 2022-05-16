@@ -29,14 +29,19 @@ h1,h2,h3,h4 {
 }
 
 html {
-   font-size: 10px;
+   font-size: 10px; 
+	
 }
 
 body {
 	font-family: $font-inter;
 	font-size: 1.4rem;
 	color: $mainColor;
-	background: #232326;	
+	background: #232326;
+	&.locked {
+		overflow: hidden;
+		// width: calc(100vw - 15px); - чтобы не сдвигался экран вправо
+	}	
 }
 
 .container {
@@ -53,10 +58,6 @@ section {
 	margin-bottom: 18rem;
 }
 
-header {
-	
-	
-}
 .menu-wrapper {
 	position: fixed;
 	top: 0;
@@ -69,21 +70,17 @@ header {
 .header {
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
-	
+	align-items: center;		
 
 	&__nav {
 		display: flex;
 		align-items: center;
-		gap: 2.5rem;
+		gap: 2.5rem;		
 	}
 	&__contact {
 		display: flex;
 		align-items: center;
 		gap: 1.3rem;
-	}
-	&__tel {
-		
 	}
 	&__mail {
 		display: flex;
@@ -102,10 +99,6 @@ header {
 	&__tel,
 	&__mail{
 		transition: .3s;
-	}
-	&__link,
-	&__tel,
-	&__mail{
 		&:hover {
 			color: $red;
 		}
@@ -717,7 +710,6 @@ header {
 		width: 100%;
 		background: #383839;
 		position: absolute;
-		// z-index: 1000;
 		display: none;
 	}
 
@@ -772,33 +764,71 @@ header {
 // popup - обсудить проект 
 // <div class="popup-form">
 
-.blackout {
-	content: '';
-	background-color: rgba(0, 0, 0, 0.8);
+.popup {
+	width: 100%;
+	height: 100vh;
 	position: fixed;
-	left: 0;
 	top: 0;
+	left: 0;
+	z-index: 10;
+	visibility: hidden;
+	opacity: 0;
+	transition: all .3s;
+	pointer-events: none;
+	&.is-active {
+		opacity: 1;
+		visibility: visible;
+		pointer-events: all;
+	}
+}
+
+.blackout {
 	width: 100%;
 	height: 100%;
-	z-index: 10;
-	display: none;
-}
-.modal-project .blackout {
-   display: block;
-}
-.modal-project .popup-form {
-	top: 20px;
-	left: 50%;
-	transform: translate(-50%);
+	background-color: rgba(0, 0, 0, 0.8);
+	display: flex;
+	padding: 20px;
 }
 
 .popup-form {
 	max-width: 600px;
 	background: #232326;
-	position: absolute;
-	z-index: 5;
-	
+	margin: auto;
+	max-height: 100%; // (или 90% или вообще убрать если известен размер окна)
+	overflow: auto;
+	position: relative;
 }
+
+// .blackout {
+// 	content: '';
+// 	background-color: rgba(0, 0, 0, 0.8);
+// 	position: fixed;
+// 	left: 0;
+// 	top: 0;
+// 	width: 100%;
+// 	height: 100%;
+// 	z-index: 10;
+// }
+
+// .popup {
+// 	position: fixed;
+// 	z-index: 15;
+// 	display: none;
+// }
+
+// .modal-project .popup  {
+// 	display: block;	
+// }
+
+// .popup-form {
+// 	max-width: 600px;
+// 	background: #232326;
+// 	position: relative;
+// 	top: 20px;
+// 	left: 50%;
+// 	transform: translate(-50%);
+// }
+
 .feedback-form {
 	padding: 5.5rem 2rem 4rem;
 	

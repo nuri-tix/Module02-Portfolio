@@ -96,6 +96,9 @@ section {
 	background: #232326;
 	width: 100%;
    z-index: 5;
+	@media (max-width: $mob_460) {
+		padding: 2.5rem 0;
+	}
 }
 
 .header {

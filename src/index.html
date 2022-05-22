@@ -12,33 +12,47 @@
    <header>
       <div class="menu-wrapper">
          <div class="container">
-            <div class="header">
-               <nav class="header__navigation">
-                  <ul class="header__nav">
-                     <li class="header__item">
-                        <a href="#" class="header__link">Обо&nbsp;мне</a>
-                     </li>
-                     <li class="header__item">
-                        <a href="#" class="header__link">Портфолио</a>
-                     </li>
-                     <li class="header__item">
-                        <a href="#" class="header__link">Этапы&nbsp;работ</a>
-                     </li>
-                     <li class="header__item">
-                        <a href="#" class="header__link">Цены</a>
-                     </li>
-                     <li class="header__item">
-                        <a href="#" class="header__link">Обратная&nbsp;связь</a>
-                     </li>
-                  </ul>
-               </nav>
-               <div class="header__contact">
-                  <a href="tel:89237777777" class="header__tel">
-                     8 923 777-77-77
-                  </a>
-                  <a href="mailto:alexdev@gmail.com" class="header__mail">
-                     alexdev@gmail.com
-                  </a>
+            <div class="header-wrapper">
+               <div class="header">
+                  <nav class="header__navigation">
+                     <ul class="header__nav">
+                        <li class="header__item">
+                           <a href="#" class="header__link">Обо&nbsp;мне</a>
+                        </li>
+                        <li class="header__item">
+                           <a href="#" class="header__link">Портфолио</a>
+                        </li>
+                        <li class="header__item">
+                           <a href="#" class="header__link">Этапы&nbsp;работ</a>
+                        </li>
+                        <li class="header__item">
+                           <a href="#" class="header__link">Цены</a>
+                        </li>
+                        <li class="header__item">
+                           <a href="#" class="header__link">Обратная&nbsp;связь</a>
+                        </li>
+                     </ul>
+                  </nav>
+                  <div class="header__contact">
+                     <a href="tel:89237777777" class="header__tel">
+                        8 923 777-77-77
+                     </a>
+                     <a href="mailto:alexdev@gmail.com" class="header__mail header__mail_del">
+                        alexdev@gmail.com
+                     </a>
+                  </div>
+               </div>
+            </div>
+            <div class="header-mobile">
+               <div class="menu-mobile">
+                  <div class="menu-mobile__item">
+                     <a href="tel:89237777777" class="menu-mobile__tel">
+                        8 923 777-77-77
+                     </a>
+                  </div>
+                  <div class="menu-mobile__item">
+                     <button class="menu-mobile__burger open-popup" data-name="menu"></button>
+                  </div>
                </div>
             </div>
          </div>
@@ -47,7 +61,9 @@
 
    <section class="profession">
       <div class="container">
-         <img src="images/bg.png" alt="bg" class="profession__bg">
+         <div class="profession__cover">
+            <img src="images/bg.png" alt="bg" class="profession__bg">
+         </div>
          <div class="profession__title-box">
             <div class="profession__name">
                Александр Антропов
@@ -75,8 +91,8 @@
                   </li>
                </ul>
             </div>
-            <div class="grid__item_line"></div>
-            <div class="grid__item">
+            <div class="grid__line"></div>
+            <div class="grid__item grid__item_skill">
                <div class="skills">
                   <div class="skills__item">
                      <div class="skills__subtitle skills__subtitle_indent-mid">
@@ -96,7 +112,7 @@
                   </div>
                </div>
             </div>
-            <div class="grid__item">
+            <div class="grid__item grid__item_skill">
                <div class="skills">
                   <div class="skills__item">
                      <div class="skills__subtitle skills__subtitle_indent-mid">
@@ -122,7 +138,7 @@
 
    <section class="about-me">
       <div class="container">
-         <div class="grid info-grid">
+         <div class="grid grid_one-row info-grid">
             <div class="grid__item">
                <h2 class="info-grid__title subtitle">
                   Обо мне
@@ -130,11 +146,11 @@
             </div>
             <div class="grid__item">
                <div class="info-grid__text">
-                  Создаю только эффективные решения, которые работают на результат:<br>от одностраничных сайтов, до
+                  Создаю только эффективные решения, которые работают на результат: от одностраничных сайтов, до
                   крупных интернет-порталов.
                </div>
             </div>
-            <div class="grid__item_line"></div>
+            <div class="grid__line grid__line_one"></div>
             <div class="grid__item_blank"></div>
             <div class="grid__item">
                <div class="skills">
@@ -182,8 +198,8 @@
 
    <section>
       <div class="container">
-         <div class="grid work-stage">
-            <div class="grid__item_line"></div>
+         <div class="grid grid_work-stage">
+            <div class="grid__line"></div>
             <div class="grid__item">
                <div class="work-stage__point work-stage__point_one">
                   Вы заказываете сайт
@@ -194,7 +210,7 @@
                   Связываетесь со мной по телефону или через заявку на сайте
                </div>
             </div>
-            <div class="grid__item_line"></div>
+            <div class="grid__line"></div>
             <div class="grid__item">
                <div class="work-stage__point work-stage__point_two">
                   Обговариваем детали
@@ -205,7 +221,7 @@
                   Созваниваемся или списываемся любым удобным для вас способом
                </div>
             </div>
-            <div class="grid__item_line"></div>
+            <div class="grid__line"></div>
             <div class="grid__item">
                <div class="work-stage__point work-stage__point_three">
                   Этап программирования
@@ -216,7 +232,7 @@
                   Верстаю сайт по вашему проекту пиксель в пиксель
                </div>
             </div>
-            <div class="grid__item_line"></div>
+            <div class="grid__line"></div>
          </div>
       </div>
    </section>
@@ -231,7 +247,7 @@
             </div>
          </div>
          <div class="container">
-            <div class="grid portfolio-grid">
+            <div class="grid grid_portfolio portfolio-grid">
                <div class="grid__item">
                   <h3 class="portfolio-grid__subtitle">
                      Agata Bielen
@@ -254,7 +270,7 @@
                <div class="grid__item">
                   <img src="images/screen1.jpg" alt="" class="portfolio-grid__img">
                </div>
-               <div class="grid__item_line"></div>
+               <div class="grid__line grid__line_portfolio"></div>
                <div class="grid__item">
                   <h3 class="portfolio-grid__subtitle">
                      Lemon
@@ -277,7 +293,7 @@
                <div class="grid__item">
                   <img src="images/screen2.jpg" alt="" class="portfolio-grid__img">
                </div>
-               <div class="grid__item_line"></div>
+               <div class="grid__line grid__line_portfolio"></div>
             </div>
          </div>
       </section>
@@ -286,13 +302,13 @@
          <div class="container">
             <div class="advantages">
                <div class="advantages__item_big">
-                  <p class="advantages__text">
+                  <p class="info-grid__text advantages__text">
                      Помимо создания сайтов и посадочных страниц я занимаюсь: настройкой контекстной рекламы в
                      системах
                      Яндекс.Директ и Google AdWords, а так же поисковым продвижением сайтов
                   </p>
                </div>
-               <div class="advantages__item_line"></div>
+               <div class="advantages__line"></div>
                <div class="advantages__item">
                   <div class="skills__box skills__box_icon1">
                      <div class="skills__subtitle skills__subtitle_indent-min">
@@ -362,7 +378,7 @@
             <div class="tools">
                <div class="tools__item">
                   <div class="tools__img">
-                     <img src="images/icon-html5.svg" alt="">
+                     <img src="images/icon-html5.svg" alt="" class="tools__icon">
                   </div>
                   <div class="tools__text">
                      <div class="tools__description">
@@ -375,7 +391,7 @@
                </div>
                <div class="tools__item">
                   <div class="tools__img">
-                     <img src="images/icon-css.svg" alt="">
+                     <img src="images/icon-css.svg" alt="" class="tools__icon">
                   </div>
                   <div class="tools__text">
                      <div class="tools__description">
@@ -389,7 +405,7 @@
                </div>
                <div class="tools__item">
                   <div class="tools__img">
-                     <img src="images/icon-js.svg" alt="">
+                     <img src="images/icon-js.svg" alt="" class="tools__icon">
                   </div>
                   <div class="tools__text">
                      <div class="tools__description">
@@ -403,7 +419,7 @@
                </div>
                <div class="tools__item">
                   <div class="tools__img">
-                     <img src="images/icon-jquery.svg" alt="">
+                     <img src="images/icon-jquery.svg" alt="" class="tools__icon">
                   </div>
                   <div class="tools__text">
                      <div class="tools__description">
@@ -416,7 +432,7 @@
                </div>
                <div class="tools__item">
                   <div class="tools__img">
-                     <img src="images/icon-bootstrap.svg" alt="">
+                     <img src="images/icon-bootstrap.svg" alt="" class="tools__icon">
                   </div>
                   <div class="tools__text">
                      <div class="tools__description">
@@ -430,7 +446,7 @@
                </div>
                <div class="tools__item">
                   <div class="tools__img">
-                     <img src="images/icon-php.svg" alt="">
+                     <img src="images/icon-php.svg" alt="" class="tools__icon tools__icon_php">
                   </div>
                   <div class="tools__text">
                      <div class="tools__description">
@@ -443,7 +459,7 @@
                </div>
                <div class="tools__item">
                   <div class="tools__img">
-                     <img src="images/icon-vue.svg" alt="">
+                     <img src="images/icon-vue.svg" alt="" class="tools__icon">
                   </div>
                   <div class="tools__text">
                      <div class="tools__description">
@@ -456,7 +472,7 @@
                </div>
                <div class="tools__item">
                   <div class="tools__img">
-                     <img src="images/icon-wordpress.svg" alt="">
+                     <img src="images/icon-wordpress.svg" alt="" class="tools__icon">
                   </div>
                   <div class="tools__text">
                      <div class="tools__description">
@@ -474,18 +490,18 @@
       <section>
          <div class="container">
             <div class="grid prices">
-               <div class="grid__item">
+               <div class="grid__item grid__item_prices">
                   <h2 class="prices__title subtitle">
                      Тарифы
                   </h2>
                </div>
-               <div class="grid__item">
+               <div class="grid__item grid__item_prices">
                   <div class="info-grid__text info-grid__text_prices">
                      Представленные ниже цены зависят не только от того какой сайт вы хотите. Конечная цена будет
                      озвучена после прочтения Вашего ТЗ
                   </div>
                </div>
-               <div class="grid__item_line"></div>
+               <div class="grid__line"></div>
                <div class="grid__item">
                   <div class="prices-flex">
                      <div class="prices-flex__item">
@@ -528,7 +544,7 @@
                      </div>
                   </div>
                </div>
-               <div class="grid__item_line"></div>
+               <div class="grid__line"></div>
                <div class="grid__item">
                   <div class="prices-flex">
                      <div class="prices-flex__item">
@@ -571,7 +587,7 @@
                      </div>
                   </div>
                </div>
-               <div class="grid__item_line"></div>
+               <div class="grid__line"></div>
                <div class="grid__item">
                   <div class="prices-flex">
                      <div class="prices-flex__item">
@@ -620,8 +636,8 @@
 
       <section class="feedback">
          <div class="container">
-            <div class="grid">
-               <div class="grid__item">
+            <div class="grid grid_one-row">
+               <div class="grid__item grid__item_indent">
                   <div class="feedback__title-box">
                      <h2 class="feedback__title subtitle">
                         Расскажите<br>о своем проекте
@@ -634,7 +650,7 @@
                      свяжусь с вами в ближайшее время
                   </div>
                </div>
-               <div class="grid__item_line"></div>
+               <div class="grid__line grid__line_one"></div>
                <div class="grid__item grid__item_feedback">
                   <ul class="social">
                      <li class="social__item">
@@ -648,7 +664,7 @@
                      </li>
                   </ul>
                </div>
-               <div class="grid__item">
+               <div class="grid__item grid__item_form">
                   <form class="form">
                      <div class="form__label">
                         Телефон или почта
@@ -678,22 +694,22 @@
       <footer class="footer" id="footer">
          <div class="container">
             <div class="footer__wrapper">
-               <div class="header">
-                  <ul class="header__nav">
+               <div class="footer__menu header">
+                  <ul class="footer__nav header__nav">
                      <li class="header__item">
-                        <a href="#" class="header__link">Обо&nbsp;мне</a>
+                        <a href="#" class="footer__link header__link">Обо&nbsp;мне</a>
                      </li>
                      <li class="header__item">
-                        <a href="#" class="header__link">Портфолио</a>
+                        <a href="#" class="footer__link header__link">Портфолио</a>
                      </li>
                      <li class="header__item">
-                        <a href="#" class="header__link">Этапы&nbsp;работ</a>
+                        <a href="#" class="footer__link header__link">Этапы&nbsp;работ</a>
                      </li>
                      <li class="header__item">
-                        <a href="#" class="header__link">Цены</a>
+                        <a href="#" class="footer__link header__link">Цены</a>
                      </li>
                      <li class="header__item">
-                        <a href="#" class="header__link">Обратная&nbsp;связь</a>
+                        <a href="#" class="footer__link header__link">Обратная&nbsp;связь</a>
                      </li>
                   </ul>
                   <div class="header__contact">
@@ -721,14 +737,13 @@
 
    <!-- popup - обсудить проект -->
 
-
    <div class="popup" data-modal="project">
       <div class="blackout">
          <div class="popup-form">
             <div class="feedback-form">
                <div class="feedback-form__wrapper">
                   <h3 class="feedback-form__title">
-                     Расскажите о своем проекте
+                     Расскажите о&nbsp;своем проекте
                   </h3>
                   <p class="feedback-form__text">
                      Заполните все поля, и я свяжусь с вами в ближайшее время
@@ -761,6 +776,55 @@
          </div>
       </div>
    </div>
+
+   <!-- popup - menu -->
+
+   <div class="popup" data-modal="menu">
+      <div class="blackout">
+         <div class="popup-menu">
+            <div class="modal-menu">
+               <ul class="modal-nav">
+                  <li class="modal-nav__item">
+                     <a href="#" class="modal-nav__link">Обо&nbsp;мне</a>
+                  </li>
+                  <li class="modal-nav__item">
+                     <a href="#" class="modal-nav__link">Портфолио</a>
+                  </li>
+                  <li class="modal-nav__item">
+                     <a href="#" class="modal-nav__link">Этапы&nbsp;работ</a>
+                  </li>
+                  <li class="modal-nav__item">
+                     <a href="#" class="modal-nav__link">Цены</a>
+                  </li>
+                  <li class="modal-nav__item">
+                     <a href="#" class="modal-nav__link">Обратная&nbsp;связь</a>
+                  </li>
+               </ul>
+               <div class="modal-contact">
+                  <a href="tel:89237777777" class="modal-contact__tel">
+                     8 923 777-77-77
+                  </a>
+                  <a href="mailto:alexdev@gmail.com" class="modal-contact__mail">
+                     alexdev@gmail.com
+                  </a>
+               </div>
+               <ul class="social social_modal">
+                  <li class="social__item social__item_modal">
+                     <a href="#" class="social__link social__link_modal">Vk</a>
+                  </li>
+                  <li class="social__item social__item_modal">
+                     <a href="#" class="social__link social__link_modal">Instagram</a>
+                  </li>
+                  <li class="social__item social__item_modal">
+                     <a href="#" class="social__link social__link_modal">Linkedin</a>
+                  </li>
+               </ul>
+            </div>
+            <button class="popup-close popup-close_menu"></button>
+         </div>
+      </div>
+   </div>
+
 </body>
 
 </html>

@@ -180,6 +180,9 @@ align-items: center;
 
 .profession {
 	margin-top: 12.4rem;
+	@media (max-width: $mob_460) {
+		margin-top: 8rem;
+	}
 
 	&__cover {
 		width: 100%;

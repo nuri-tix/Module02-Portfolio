@@ -61,7 +61,7 @@ function openModal(elem) {
 }
 
 function closeModal(e) {
-   if (e.target.classList.contains('popup-close') || e.target.classList.contains('blackout')) {
+   if (e.target.classList.contains('popup-close') || e.target.classList.contains('blackout') || e.target.classList.contains('blackout-menu')) {
       e.target.closest('.popup').classList.remove('is-active');
       body.classList.remove('locked');
    }
@@ -132,7 +132,7 @@ select();
 
   
   
-//   selectResult.addEventListener('click', selectToggle) 
+//   selectResult.addEventListener('click', selectToggle)
 
 //   document.body.addEventListener('click', selectChoose)
 
@@ -144,7 +144,7 @@ select();
 //    function selectChoose(e) {
 //      let inside = e.target.closest('.select');
 //      if(inside){
-//        selectResult.textContent = e.target.innerText;       
+//        selectResult.textContent = e.target.innerText;
 //      }
 //      select.classList.remove('active')
 //    };
@@ -152,3 +152,19 @@ select();
 // };
 
 // select();
+
+// Smooth Scroll
+const links = document.querySelectorAll(".header__link");
+
+for (const link of links) {
+   link.addEventListener("click", clickHandler);
+}
+
+function clickHandler(e) {
+   e.preventDefault();
+   const href = this.getAttribute("href");
+
+   document.querySelector(href).scrollIntoView({
+      behavior: "smooth"
+   });
+}

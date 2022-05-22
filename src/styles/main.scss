@@ -56,7 +56,7 @@ body {
 	font-size: 1.4rem;
 	color: $mainColor;
 	background: #232326;
-	overflow-x: hidden;
+	// overflow-x: hidden;
 	&.locked {
 		overflow: hidden;
 		//width: calc(100vw - 15px); //- чтобы не сдвигался экран вправо
@@ -70,9 +70,10 @@ body {
 	
 }
 
-.wrapper_black {	
+.wrapper_black {
 	background: linear-gradient(180deg, #141416 0%, rgba(20, 20, 22, 0) 100%);		
 }
+ 
 
 section {
 	margin-bottom: 18rem;
@@ -174,7 +175,20 @@ align-items: center;
 	}
 }
 
-
+#about-me, #work-stage, #prices, #feedback {
+	&::before {
+		content: '';
+		display: block;
+		height: 110px;
+		margin: -110px 0 0;
+	}
+}
+#portfolio {
+	margin-top: -110px;
+	padding-top: 110px;
+	display: inline-block;
+	width: 100%;
+} 
 
 // <section class="profession">
 
@@ -1524,21 +1538,17 @@ align-items: center;
 	width: 100%;
 	height: 100%;
 	background-color: rgba(0, 0, 0, 0.8);
-	// display: flex;
+	display: flex;
 	// padding: 20px;
 }
 
 .popup-form {
-	max-width: 600px;
+	width: 600px;
 	background: #232326;
 	margin: auto;
 	// max-height: 100%; // (или 90% или вообще убрать если известен размер окна)
 	overflow: auto;
 	position: relative;
-	top: 5%;
-	@media (max-width: $mob_600) {
-		top: 0;
-	}
 }
 
 // .blackout {
@@ -1613,6 +1623,12 @@ align-items: center;
 }
 
 // popup - menu
+
+.blackout-menu {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.8);
+}
 
 .popup-menu {
 	width: 100%;

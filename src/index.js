@@ -61,7 +61,7 @@ function openModal(elem) {
 }
 
 function closeModal(e) {
-   if (e.target.classList.contains('popup-close') || e.target.classList.contains('blackout') || e.target.classList.contains('blackout-menu')) {
+   if (e.target.classList.contains('popup-close') || e.target.classList.contains('blackout') || e.target.classList.contains('blackout-menu') || e.target.classList.contains('modal-nav__link')) {
       e.target.closest('.popup').classList.remove('is-active');
       body.classList.remove('locked');
    }
